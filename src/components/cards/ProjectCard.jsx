@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 330px;
+  width: 95%;
+  max-width: 330px;
+  margin: 0px auto;
   height: 490px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
@@ -21,8 +23,8 @@ const Card = styled.div`
   }
 `;
 const Image = styled.img`
-  width: 100%;
-  height: 180px;
+  width: inherit;
+  max-height: 180px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);

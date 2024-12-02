@@ -56,8 +56,9 @@ const SkillsContainer = styled.div`
   justify-content: center;
 `;
 const Skill = styled.div`
-  width: 100%;
+  width: 95%;
   max-width: 500px;
+  margin: 0px auto;
   background-color: ${({ theme }) => theme.bg_secondary};
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
