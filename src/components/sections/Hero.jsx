@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import Typewriter from "typewriter-effect";
+import { ReactTyped } from "react-typed";
 import HeroImg from "../../images/HeroImage.jpg";
 import HeroBgAnimation from "../HeroBgAnimation";
 import { Tilt } from "react-tilt";
@@ -90,11 +90,9 @@ const Title = styled.div`
   }
 `;
 
-const TextLoop = styled.div`
+const TextLoop = styled.p`
   font-weight: 600;
   font-size: 32px;
-  display: flex;
-  gap: 12px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
 
@@ -109,7 +107,7 @@ const TextLoop = styled.div`
   }
 `;
 
-const Span = styled.div`
+const Span = styled.span`
   color: ${({ theme }) => theme.primary};
 `;
 
@@ -233,14 +231,17 @@ const Hero = () => {
                   Hi, I am <br /> {Bio.name}
                 </Title>
                 <TextLoop>
-                  I am a
+                  I am a{" "}
                   <Span>
-                    <Typewriter
-                      options={{
-                        strings: Bio.roles,
-                        autoStart: true,
-                        loop: true,
+                    <ReactTyped
+                      style={{
+                        display: "inline",
+                        color: `${({ theme }) => theme.primary}`,
                       }}
+                      strings={Bio.roles}
+                      typeSpeed={120}
+                      backSpeed={140}
+                      loop
                     />
                   </Span>
                 </TextLoop>
