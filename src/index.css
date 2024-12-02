@@ -17,7 +17,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
-  height: 80px;
+  height: 4px;
 }
 
 /* Track */
@@ -37,5 +37,5 @@ body {
 }
 
 ::-webkit-backdrop-filter {
-  blur: 3px saturate(106%);
+  backdrop-filter: blur(3px) saturate(106%);
 }

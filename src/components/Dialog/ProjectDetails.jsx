@@ -30,6 +30,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    max-width: 90%;
+    margin: 30px auto;
+  }
 `;
 
 const Title = styled.div`

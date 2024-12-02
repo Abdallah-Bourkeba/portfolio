@@ -3,6 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
+// import useThemeState from "../utils/useThemeState";
+// import { LuMoon, LuSun } from "react-icons/lu";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -15,6 +17,7 @@ const Nav = styled.div`
   top: 0;
   z-index: 10;
   color: white;
+  transition: background-color 0.5s ease; /* Added transition */
 `;
 const ColorText = styled.div`
   color: ${({ theme }) => theme.primary};
@@ -31,6 +34,7 @@ const NavbarContainer = styled.div`
   font-size: 1rem;
 `;
 const NavLogo = styled(LinkR)`
+  color: ${({ theme }) => theme.text_primary};
   display: flex;
   align-items: center;
   width: 80%;
@@ -38,7 +42,6 @@ const NavLogo = styled(LinkR)`
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  color: inherit;
 `;
 
 const NavItems = styled.ul`
@@ -73,12 +76,13 @@ const ButtonContainer = styled.div`
   justify-content: end;
   align-items: center;
   padding: 0 6px;
+  gap: 16px;
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-const GithubButton = styled.a`
+const NavButton = styled.a`
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   justify-content: center;
@@ -96,6 +100,24 @@ const GithubButton = styled.a`
     color: ${({ theme }) => theme.text_primary};
   }
 `;
+
+// const ToogleTheme = styled.button`
+//   background: ${({ theme }) => theme.primary};
+//   color: white;
+//   border: none;
+//   border-radius: 50%;
+//   padding: 10px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: all 0.6s ease-in-out;
+//   font-size: 20px;
+//   &:hover {
+//     background: ${({ theme }) => theme.text_primary};
+//     color: ${({ theme }) => theme.primary};
+//   }
+// `;
 
 const MobileIcon = styled.div`
   height: 100%;
@@ -135,6 +157,11 @@ const MobileMenu = styled.ul`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
+  // const { mode, setTheme } = useThemeState();
+
+  // const themeToggler = () => {
+  //   setTheme(mode);
+  // };
   return (
     <Nav>
       <NavbarContainer>
@@ -173,7 +200,7 @@ const Navbar = () => {
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
               Education
             </NavLink>
-            <GithubButton
+            <NavButton
               href={Bio.github}
               target="_Blank"
               style={{
@@ -182,14 +209,17 @@ const Navbar = () => {
               }}
             >
               Github Profile
-            </GithubButton>
+            </NavButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
+          {/* <ToogleTheme onClick={themeToggler}>
+            {mode.theme === "light" ? <LuMoon /> : <LuSun />}
+          </ToogleTheme> */}
+          <NavButton href={Bio.github} target="_Blank">
             Github Profile
-          </GithubButton>
+          </NavButton>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>

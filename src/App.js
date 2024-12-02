@@ -1,5 +1,4 @@
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
@@ -12,6 +11,7 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import { useState } from "react";
+import useThemeState from "./utils/useThemeState";
 // import StarCanvas from "./components/canvas/Stars";
 
 const Body = styled.div`
@@ -19,6 +19,7 @@ const Body = styled.div`
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.5s ease; /* Added transition */
 `;
 
 const Wrapper = styled.div`
@@ -35,12 +36,15 @@ const Wrapper = styled.div`
     );
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  transition: background 0.5s ease; /* Added transition */
 `;
 
 function App() {
+  const { mode } = useThemeState();
+
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={mode}>
       <BrowserRouter>
         <Navbar />
         <Body>
