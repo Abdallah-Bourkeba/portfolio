@@ -164,6 +164,24 @@ export const education = [
 
 export const projects = [
   {
+    id: 11,
+    title: "Next Dashboard",
+    description:
+      "NextAdmin GitHub Starter is a comprehensive admin dashboard template built with Next.js. It provides a robust and scalable foundation for building admin interfaces, complete with user authentication, product management, and transaction tracking.",
+    image: "projects/Admin Dashboard.png",
+    tags: [
+      "Next.js",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Stripe",
+      "Tailwind CSS",
+    ],
+    category: "web app",
+    github: "https://github.com/Abdallah-Bourkeba/nextadmin",
+  },
+  {
     id: 1,
     title: "MERN Ecommerce",
     description:
