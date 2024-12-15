@@ -154,7 +154,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://scontent-hbe1-2.xx.fbcdn.net/v/t39.30808-6/326325504_6167967593223118_5499250975956751324_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ANK0qmcGW8gQ7kNvgG-8fAH&_nc_zt=23&_nc_ht=scontent-hbe1-2.xx&_nc_gid=AChwjguVQxKjVaedUpZ4jAO&oh=00_AYCC3EEAhb9ta7AZr06o4aY9_lIH372iFmXQ_qxGut9xtQ&oe=675126E2",
+    img: "https://eng.asu.edu.eg/img/logo.png",
     school: "ASU - Faculty of Engineering.",
     date: "2024 - Present",
     desc: "Currently pursuing a Bachelor of Engineering, building a strong foundation in technical concepts and practical applications in engineering. Actively expanding knowledge through coursework, projects, and hands-on experiences.",
