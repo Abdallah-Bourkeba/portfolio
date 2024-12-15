@@ -154,7 +154,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://eng.asu.edu.eg/img/logo.png",
+    img: "https://new.eng.asu.edu.eg/public/ext/images/logo.png",
     school: "ASU - Faculty of Engineering.",
     date: "2024 - Present",
     desc: "Currently pursuing a Bachelor of Engineering, building a strong foundation in technical concepts and practical applications in engineering. Actively expanding knowledge through coursework, projects, and hands-on experiences.",
