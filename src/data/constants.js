@@ -136,7 +136,7 @@ export const experiences = [
     img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/We_logo.svg",
     role: "Full Stack Developer",
     company: "Telecom Egypt",
-    date: "September 2023 - Present",
+    date: "September 2023 - April 2024",
     desc: "Developed web apps using MongoDB, Express.js, React, and Node.js. Built scalable solutions, managed databases, and integrated front-end and back-end systems.",
     skills: [
       "ReactJS",
